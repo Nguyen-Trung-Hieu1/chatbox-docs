@@ -7,11 +7,10 @@ Bộ này viết theo đúng đường đi của một thao tác: **người dù
 ## Cấu trúc bộ tài liệu
 
 ```text
-docs/
+chatbox-docs/
 ├── README.md
-├── 01-tong-quan/
-│   ├── he-thong.md
-│   └── duong-di-request.md
+├── 01-cau-truc-he-thong.md
+├── luong-request-chung.md
 ├── 02-dang-nhap/
 │   ├── dang-nhap-keycloak.md
 │   ├── token-va-f5.md
@@ -38,7 +37,8 @@ docs/
 
 | Thao tác/câu hỏi | File |
 | --- | --- |
-| Hệ thống gồm những gì, request thường đi qua đâu | [Hệ thống](01-tong-quan/he-thong.md), [đường đi request](01-tong-quan/duong-di-request.md) |
+| Trong K3s có những gì, các phần nối với nhau ra sao | [Cấu trúc hệ thống](01-cau-truc-he-thong.md) |
+| Một request đi qua FE, Nginx, BE như thế nào | [Đường đi request](luong-request-chung.md) |
 | Bấm Đăng nhập / Tạo tài khoản | [Đăng nhập Keycloak](02-dang-nhap/dang-nhap-keycloak.md) |
 | Bấm F5 / token hết hạn / Đăng xuất | [Token và F5](02-dang-nhap/token-va-f5.md) |
 | `sub` nối với Mongo user thế nào, tài khoản cũ ra sao | [Liên kết user](02-dang-nhap/lien-ket-user-mongodb.md) |

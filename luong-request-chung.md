@@ -1,6 +1,6 @@
 # 02. Một request đi qua đâu?
 
-[← Mục lục](../README.md)
+[← Mục lục](README.md)
 
 Lấy ví dụ user đã đăng nhập, FE muốn lấy danh sách hội thoại:
 
@@ -17,10 +17,10 @@ Hàm [`Server.Handler`](https://github.com/Nguyen-Trung-Hieu1/Chatbox/blob/main/
 
 | Nhóm | Xác thực | Đọc chi tiết |
 | --- | --- | --- |
-| `/api/auth/*` | Luồng token/cookie, có kiểm tra Origin cho POST | [Đăng nhập](../02-dang-nhap/dang-nhap-keycloak.md), [F5](../02-dang-nhap/token-va-f5.md) |
-| `/api/me`, `/api/conversations`, `/api/history`, `/api/chat`, `/api/entitlement`, `/api/usage`, `/api/keys` | `authn` | [Chat](../04-hoi-thoai/gui-tin-nhan.md), [plan](../03-phan-quyen/doc-role-va-plan.md), [API key](../06-api-key/goi-tu-ide.md) |
-| `/api/admin/*` | `authn` → `adminOnly` | [Admin đổi plan](../03-phan-quyen/admin-doi-plan.md) |
-| `/v1/*` | `apiAuth` | [IDE](../06-api-key/goi-tu-ide.md) |
+| `/api/auth/*` | Luồng token/cookie, có kiểm tra Origin cho POST | [Đăng nhập](02-dang-nhap/dang-nhap-keycloak.md), [F5](02-dang-nhap/token-va-f5.md) |
+| `/api/me`, `/api/conversations`, `/api/history`, `/api/chat`, `/api/entitlement`, `/api/usage`, `/api/keys` | `authn` | [Chat](04-hoi-thoai/gui-tin-nhan.md), [plan](03-phan-quyen/doc-role-va-plan.md), [API key](06-api-key/goi-tu-ide.md) |
+| `/api/admin/*` | `authn` → `adminOnly` | [Admin đổi plan](03-phan-quyen/admin-doi-plan.md) |
+| `/v1/*` | `apiAuth` | [IDE](06-api-key/goi-tu-ide.md) |
 
 [`cors`](https://github.com/Nguyen-Trung-Hieu1/Chatbox/blob/main/backend/internal/delivery/http/server.go) chỉ cho request đổi trạng thái dưới `/api/` có `Origin` khớp `CORS_ORIGIN`; [`requestLogging`](https://github.com/Nguyen-Trung-Hieu1/Chatbox/blob/main/backend/internal/delivery/http/logging.go) ghi log. CORS không thay được kiểm tra user/role.
 
